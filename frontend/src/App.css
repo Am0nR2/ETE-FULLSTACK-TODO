@@ -1,0 +1,31 @@
+main {
+  width: 1680px;
+  margin: 2em auto;
+  display: flex;
+  gap: 1em;
+}
+.todo-main {
+  background-color: #34495e; /* Darker background color */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4); /* Slight transparency on the shadow */
+  display: flex;
+  height: 100%;
+  width: 450px;
+}
+
+.todo-main > .todos > form > button {
+  margin-left: 3em;
+}
+
+.todo-main > .todos > div > .todo {
+  width: 350px;
+}
+
+.todos > div {
+  width: 100%;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}

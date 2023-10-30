@@ -1,0 +1,14 @@
+.form {
+  position: absolute;
+  top: 2em;
+  width: 500px;
+  height: 200px;
+  background-color: rgb(58, 81, 88);
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: 0px 0px 25px black;
+  color: white;
+}
+.form > button {
+  margin-left: 4.7em;
+}

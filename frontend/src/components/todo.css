@@ -1,0 +1,58 @@
+.todo {
+  background-color: rgb(144, 170, 170);
+  border-radius: 10px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 1em;
+  width: 400px;
+  word-wrap: break-word;
+  position: relative;
+}
+.todo > h3,
+.todo > p {
+  margin: 0;
+}
+
+.todo > h3 {
+  color: purple;
+  font-size: 1.65em;
+}
+.todo-list > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.todo > div {
+  display: flex;
+}
+
+.todo > div > h3,
+.todo > div > input {
+  margin: 0 1em 0.5em 0;
+}
+
+.todo > div > input {
+  accent-color: green;
+  width: 20px;
+}
+
+.todo-list > div > form {
+  margin-top: auto;
+  padding: 1em;
+}
+.todo-list > div > form > button {
+  margin-left: 1.8em;
+}
+
+.todo-list > div > form > select {
+  padding: 0.5em 1em;
+  margin-left: 4em;
+  border-radius: 10px;
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}

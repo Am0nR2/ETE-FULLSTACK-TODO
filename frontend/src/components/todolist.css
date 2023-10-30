@@ -1,0 +1,42 @@
+.todo-list {
+  width: 770px;
+  background-color: #34495e; /* Darker background color */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4); /* Slight transparency on the shadow */
+  display: flex;
+}
+
+.todos > div {
+  height: 600px;
+  overflow-y: auto; /* Vertical scrolling */
+  padding: 20px; /* Add some padding inside the scrollable container */
+}
+
+/* Style the scrollable content */
+.todos > div {
+  background-color: #05262e; /* Light background color */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  color: black; /* Text color */
+  text-shadow: 0px 0px 2px white;
+  font-weight: bold;
+}
+
+/* Style scrollbars (for WebKit browsers like Chrome) */
+.todos > div::-webkit-scrollbar {
+  width: 12px;
+}
+
+.todos > div::-webkit-scrollbar-thumb {
+  background-color: #3498db; /* Scrollbar thumb color */
+  border-radius: 6px;
+}
+
+.todos > div::-webkit-scrollbar-track {
+  background-color: #ecf0f1; /* Scrollbar track color */
+}
+
+.todos > form {
+  color: white;
+}

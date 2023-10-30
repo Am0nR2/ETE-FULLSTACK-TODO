@@ -1,0 +1,520 @@
+{
+	"info": {
+		"_postman_id": "e0c6349c-8ff3-42e4-b80b-0e799ed13f34",
+		"name": "ETE-TODO-NESTJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28492848"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "RegisterPage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NjY1NTI0LCJleHAiOjE3MDEyNTc1MjR9.DuuaUCVfqfNmHnP_6OaFnkGLjMOGX1vSrNoGGJzjjeU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"ETE TECH\",\r\n    \"email\" : \"etetech@hotmail.com\",\r\n    \"password\" : \"SECRET\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						},
+						"description": "Users can register to our system with this route, name, email and password required"
+					},
+					"response": []
+				},
+				{
+					"name": "LoginPage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NjY1NTI0LCJleHAiOjE3MDEyNTc1MjR9.DuuaUCVfqfNmHnP_6OaFnkGLjMOGX1vSrNoGGJzjjeU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"etetech@hotmail.com\",\r\n    \"password\" : \"SECRET\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "Users can log in with this route, email and password is required."
+					},
+					"response": []
+				},
+				{
+					"name": "Me(Returns User)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NjcwMjQ0LCJleHAiOjE3MDEyNjIyNDR9.2Q2tW0rJP2z4S_cLa2rMbAirVJUDpzKWyrYs7yvijZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/auth/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"me"
+							]
+						},
+						"description": "This route returns the current user based-on the jwt..."
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NjcwMjQ0LCJleHAiOjE3MDEyNjIyNDR9.2Q2tW0rJP2z4S_cLa2rMbAirVJUDpzKWyrYs7yvijZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Ete Tech Company\",\r\n    \"password\" : \"SECRET\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"update"
+							]
+						},
+						"description": "Users can edit their names, e-mails and passwords by using this route..."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "team",
+			"item": [
+				{
+					"name": "Get All Teams",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NjcwMjQ0LCJleHAiOjE3MDEyNjIyNDR9.2Q2tW0rJP2z4S_cLa2rMbAirVJUDpzKWyrYs7yvijZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/team",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"team"
+							]
+						},
+						"description": "It returns all the teams inside the database, jwt is necessary otherwise user will be unauthorized..."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NjcwMjQ0LCJleHAiOjE3MDEyNjIyNDR9.2Q2tW0rJP2z4S_cLa2rMbAirVJUDpzKWyrYs7yvijZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/team/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"team",
+								"1"
+							]
+						},
+						"description": "It returns only one team inside the database with the proven id as param..., jwt is necessary otherwise user will be unauthorized...\n\n[http://localhost:3000/team/:id](http://localhost:3000/team/1)"
+					},
+					"response": []
+				},
+				{
+					"name": "Create A Team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NjcwMjQ0LCJleHAiOjE3MDEyNjIyNDR9.2Q2tW0rJP2z4S_cLa2rMbAirVJUDpzKWyrYs7yvijZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"ETE TECHNOLOGY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/team/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"team",
+								""
+							]
+						},
+						"description": "Users can create Teams with this route, jwt is necessary otherwise user will be unauthorized... \"name\" field is necessary..."
+					},
+					"response": []
+				},
+				{
+					"name": "Update A Team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NjcwMjQ0LCJleHAiOjE3MDEyNjIyNDR9.2Q2tW0rJP2z4S_cLa2rMbAirVJUDpzKWyrYs7yvijZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"add_user\" : 1,\r\n    \"remove_user\" : 2,\r\n    \"name\" : \"ETE COMPANY LIMITED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/team/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"team",
+								"1"
+							]
+						},
+						"description": "Users can update team with this route, they can add, remove other users from the team, and they can also change the name of the team...\n\n\"add_user\" : \"id\" adds users to the team...\n\n\"remove_user\" : \"id\" removes users from the team...\n\n\"name\" : \"SOME STRING\" changes the name of the team..."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete A Team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NjcwMjQ0LCJleHAiOjE3MDEyNjIyNDR9.2Q2tW0rJP2z4S_cLa2rMbAirVJUDpzKWyrYs7yvijZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/team/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"team",
+								"1"
+							]
+						},
+						"description": "Users can delete their team with this route, all the todos related to this team will be removed from the database... Only founder of the team can do this action...\n\n[http://localhost:3000/team/:id](http://localhost:3000/team/1)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "todo",
+			"item": [
+				{
+					"name": "Create A ToDo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NjU5MzA2LCJleHAiOjE3MDEyNTEzMDZ9.vkdq6uduJoA7xfdxpa_tpfPcFv2RzF86at_7raEnweA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Naber\", \r\n    \"description\" :  \"canım\",\r\n    \"private\" : false,\r\n    \"teamId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/todo/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"todo",
+								""
+							]
+						},
+						"description": "Users can create a todo with this route, jwt is necessary, todos can be both private or related to a team, a private todo can only be visible and editable to its creator..."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Your Todos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NjcwMjQ0LCJleHAiOjE3MDEyNjIyNDR9.2Q2tW0rJP2z4S_cLa2rMbAirVJUDpzKWyrYs7yvijZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/todo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"todo"
+							]
+						},
+						"description": "Users can get all of their todos with this route including both private and team todos."
+					},
+					"response": []
+				},
+				{
+					"name": "Get One ToDo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NjcwMjQ0LCJleHAiOjE3MDEyNjIyNDR9.2Q2tW0rJP2z4S_cLa2rMbAirVJUDpzKWyrYs7yvijZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/todo/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"todo",
+								"1"
+							]
+						},
+						"description": "Users can get one of their todos by using it's id...\n\n[http://localhost:3000/todo/:id](http://localhost:3000/todo/:id)"
+					},
+					"response": []
+				},
+				{
+					"name": "Update One ToDo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NjY1NTI0LCJleHAiOjE3MDEyNTc1MjR9.DuuaUCVfqfNmHnP_6OaFnkGLjMOGX1vSrNoGGJzjjeU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"ETE TECHNOLOGY TODO\",\r\n    \"description\" : \"ETE TECHNOLOGY DESCRIPTION\",\r\n    \"done\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/todo/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"todo",
+								"1"
+							]
+						},
+						"description": "Users can update one of their todos with this route, they can change title and description, also they can mark it as it is done or not... If it is a team todo, all the members of team can update it, otherwise only the creator of the todo can update private todos.\n\n[http://localhost:3000/todo/:id](http://localhost:3000/todo/:id)"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One ToDo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NjcwMjQ0LCJleHAiOjE3MDEyNjIyNDR9.2Q2tW0rJP2z4S_cLa2rMbAirVJUDpzKWyrYs7yvijZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/todo/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"todo",
+								"1"
+							]
+						},
+						"description": "Finally, users can delete their todos with this route, If the todo is a team todo, all the team members can delete it. Otherwise only the creator of the todo can delete private todos..."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

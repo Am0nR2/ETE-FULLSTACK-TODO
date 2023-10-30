@@ -1,0 +1,39 @@
+.navbar {
+  width: 1680px;
+  height: 100px;
+  background-color: rgb(94, 121, 121);
+  display: flex;
+  padding: 2em;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px black;
+  color: white;
+  text-shadow: 0px 0px 2px black;
+}
+
+.navbar > ul {
+  display: flex;
+  gap: 1em;
+}
+
+.navbar > ul > li {
+  list-style: none;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navbar > ul > li:hover {
+  background-color: rgb(138, 163, 163);
+}
+.navbar > ul > li:active {
+  transform: scale(0.95);
+  background-color: rgb(138, 163, 163);
+}
+
+/* .navbar > ul > li:active {
+
+} */
